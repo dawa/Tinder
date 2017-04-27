@@ -30,8 +30,9 @@ class CardsViewController: UIViewController {
             let profileDetailController = segue.destination as! ProfileViewController
             let draggableImage = sender as! DraggableImageView
             profileDetailController.profileImage = draggableImage.profileImageView.image
+            profileDetailController.modalPresentationStyle = .custom
+            profileDetailController.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
         }
     }
-
 }
 

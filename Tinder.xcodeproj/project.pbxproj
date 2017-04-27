@@ -15,6 +15,8 @@
 		311B02D61EB1929B00DAA2ED /* DraggableImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 311B02D51EB1929B00DAA2ED /* DraggableImageView.xib */; };
 		311B02D81EB1932C00DAA2ED /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311B02D71EB1932C00DAA2ED /* DraggableImageView.swift */; };
 		311B02DA1EB19EDB00DAA2ED /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311B02D91EB19EDB00DAA2ED /* ProfileViewController.swift */; };
+		311B02DF1EB1B3C400DAA2ED /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311B02DD1EB1B3C400DAA2ED /* BaseTransition.swift */; };
+		311B02E01EB1B3C400DAA2ED /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311B02DE1EB1B3C400DAA2ED /* FadeTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		311B02D51EB1929B00DAA2ED /* DraggableImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DraggableImageView.xib; sourceTree = "<group>"; };
 		311B02D71EB1932C00DAA2ED /* DraggableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
 		311B02D91EB19EDB00DAA2ED /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		311B02DD1EB1B3C400DAA2ED /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		311B02DE1EB1B3C400DAA2ED /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 		311B02DC1EB1AEA300DAA2ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				311B02DD1EB1B3C400DAA2ED /* BaseTransition.swift */,
+				311B02DE1EB1B3C400DAA2ED /* FadeTransition.swift */,
 				311B02D51EB1929B00DAA2ED /* DraggableImageView.xib */,
 				311B02D71EB1932C00DAA2ED /* DraggableImageView.swift */,
 			);
@@ -163,8 +169,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				311B02C61EB18A0A00DAA2ED /* CardsViewController.swift in Sources */,
+				311B02DF1EB1B3C400DAA2ED /* BaseTransition.swift in Sources */,
 				311B02D81EB1932C00DAA2ED /* DraggableImageView.swift in Sources */,
 				311B02DA1EB19EDB00DAA2ED /* ProfileViewController.swift in Sources */,
+				311B02E01EB1B3C400DAA2ED /* FadeTransition.swift in Sources */,
 				311B02C41EB18A0A00DAA2ED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
