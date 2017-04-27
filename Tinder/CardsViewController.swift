@@ -10,6 +10,8 @@ import UIKit
 
 class CardsViewController: UIViewController {
 
+    var fadeTransition: FadeTransition!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,7 +33,14 @@ class CardsViewController: UIViewController {
             let draggableImage = sender as! DraggableImageView
             profileDetailController.profileImage = draggableImage.profileImageView.image
             profileDetailController.modalPresentationStyle = .custom
-            profileDetailController.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
+
+            // Create a new instance of your fadeTransition.
+            fadeTransition = FadeTransition()
+
+            profileDetailController.transitioningDelegate = fadeTransition
+
+            // Adjust the transition duration. (seconds)
+            fadeTransition.duration = 1.0
         }
     }
 }
