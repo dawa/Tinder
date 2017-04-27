@@ -56,7 +56,22 @@ class DraggableImageView: UIView {
 
 
         } else if sender.state == .ended {
-
+            if translation.x > 50 {
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.profileImageView.center.x = self.initiaProfileImageCenter.x + 200
+                    self.profileImageView.removeFromSuperview()
+                })
+            } else if translation.x < -50 {
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.profileImageView.center.x = self.initiaProfileImageCenter.x - 200
+                    self.profileImageView.removeFromSuperview()
+                })
+            } else {
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.profileImageView.center = self.initiaProfileImageCenter
+                    self.profileImageView.transform = CGAffineTransform.identity
+                })
+            }
         }
     }
 }
