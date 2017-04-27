@@ -34,17 +34,37 @@ class DraggableImageView: UIView {
     }
 
     @IBAction func onProfileImagePanGesture(_ sender: UIPanGestureRecognizer) {
-        let translation = sender.translation(in: sender.view)
-        let imageView = sender.view as! UIImageView
+        let translation = sender.translation(in: contentView)
+        let velocity = sender.velocity(in: contentView)
+        let location = sender.location(in: contentView)
 
-        print("HERE")
         if sender.state == .began {
-            initiaProfileImageCenter = imageView.center
+            initiaProfileImageCenter = profileImageView.center
         } else if sender.state == .changed {
-            imageView.center = CGPoint(x: initiaProfileImageCenter.x + translation.x, y: initiaProfileImageCenter.y)
+
+            if velocity.x > 0 || velocity.x < 0 {
+                // upper half
+                if location.y < initiaProfileImageCenter.y {
+                    profileImageView.transform = CGAffineTransform(rotationAngle: translation.x.degreesToRadians)
+                } else {
+                // lower half
+                    profileImageView.transform = CGAffineTransform(rotationAngle: -translation.x.degreesToRadians)
+                }
+            }
+
+            profileImageView.center = CGPoint(x: initiaProfileImageCenter.x + translation.x, y: initiaProfileImageCenter.y)
+
+
         } else if sender.state == .ended {
 
         }
     }
+}
 
+extension Int {
+    var degreesToRadians: Double { return Double(self) * .pi / 180 }
+}
+extension FloatingPoint {
+    var degreesToRadians: Self { return self * .pi / 180 }
+    var radiansToDegrees: Self { return self * 180 / .pi }
 }
