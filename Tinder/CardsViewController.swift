@@ -19,5 +19,19 @@ class CardsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    @IBAction func onImageTapGesture(_ sender: UITapGestureRecognizer) {
+        let image = sender.view as! DraggableImageView
+        performSegue(withIdentifier: "profileDetailSegue", sender: image)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "profileDetailSegue" {
+            let profileDetailController = segue.destination as! ProfileViewController
+            let draggableImage = sender as! DraggableImageView
+            profileDetailController.profileImage = draggableImage.profileImageView.image
+        }
+    }
+
 }
 

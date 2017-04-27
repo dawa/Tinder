@@ -14,6 +14,7 @@
 		311B02CE1EB18A0A00DAA2ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 311B02CC1EB18A0A00DAA2ED /* LaunchScreen.storyboard */; };
 		311B02D61EB1929B00DAA2ED /* DraggableImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 311B02D51EB1929B00DAA2ED /* DraggableImageView.xib */; };
 		311B02D81EB1932C00DAA2ED /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311B02D71EB1932C00DAA2ED /* DraggableImageView.swift */; };
+		311B02DA1EB19EDB00DAA2ED /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311B02D91EB19EDB00DAA2ED /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		311B02CF1EB18A0A00DAA2ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		311B02D51EB1929B00DAA2ED /* DraggableImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DraggableImageView.xib; sourceTree = "<group>"; };
 		311B02D71EB1932C00DAA2ED /* DraggableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
+		311B02D91EB19EDB00DAA2ED /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,33 @@
 		311B02C21EB18A0A00DAA2ED /* Tinder */ = {
 			isa = PBXGroup;
 			children = (
+				311B02DC1EB1AEA300DAA2ED /* View */,
+				311B02DB1EB1AE8600DAA2ED /* View Controllers */,
 				311B02C31EB18A0A00DAA2ED /* AppDelegate.swift */,
-				311B02C51EB18A0A00DAA2ED /* CardsViewController.swift */,
 				311B02C71EB18A0A00DAA2ED /* Main.storyboard */,
-				311B02D51EB1929B00DAA2ED /* DraggableImageView.xib */,
-				311B02D71EB1932C00DAA2ED /* DraggableImageView.swift */,
 				311B02CA1EB18A0A00DAA2ED /* Assets.xcassets */,
 				311B02CC1EB18A0A00DAA2ED /* LaunchScreen.storyboard */,
 				311B02CF1EB18A0A00DAA2ED /* Info.plist */,
 			);
 			path = Tinder;
+			sourceTree = "<group>";
+		};
+		311B02DB1EB1AE8600DAA2ED /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				311B02D91EB19EDB00DAA2ED /* ProfileViewController.swift */,
+				311B02C51EB18A0A00DAA2ED /* CardsViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		311B02DC1EB1AEA300DAA2ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				311B02D51EB1929B00DAA2ED /* DraggableImageView.xib */,
+				311B02D71EB1932C00DAA2ED /* DraggableImageView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +164,7 @@
 			files = (
 				311B02C61EB18A0A00DAA2ED /* CardsViewController.swift in Sources */,
 				311B02D81EB1932C00DAA2ED /* DraggableImageView.swift in Sources */,
+				311B02DA1EB19EDB00DAA2ED /* ProfileViewController.swift in Sources */,
 				311B02C41EB18A0A00DAA2ED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
